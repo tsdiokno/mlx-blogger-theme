@@ -43,13 +43,13 @@ include "partials/variable-definitions.xml"
 -----------------------
 */
 
-include "css/main-scss.min.css"
+include "css-dist/main-scss.min.css"
 
 ]]></b:skin>
     <b:template-skin>
       <![CDATA[
 
-include "css/template-skin.min.css"
+include "css-dist/template-skin.min.css"
 
 ]]></b:template-skin>
 

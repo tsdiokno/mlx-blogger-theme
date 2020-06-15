@@ -23,13 +23,37 @@ module.exports = function(grunt) {
 
     },
 
+    // autoprefixer: {
+    //     options: {
+    //         browsers: ['last 2 versions', 'ie 8', 'ie 9']
+    //     },
+    //     multiple_files: {
+    //         expand: true,
+    //         flatten: true,
+    //         src: 'include/css/*.css',
+    //         dest: 'include/css-dist'
+    //     },
+    // },
+    //
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({overrideBrowserslist: ['last 2 versions']})
+        ]
+      },
+      dist: {
+        src: 'include/css/*.css'
+      }
+    },
+
     cssmin: {
       target: {
         files: [{
           expand: true,
           cwd: 'include/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'include/css',
+          dest: 'include/css-dist',
           ext: '.min.css'
         }]
       }
@@ -51,11 +75,12 @@ module.exports = function(grunt) {
 
   // Load plugins used by this task gruntfile
   grunt.loadNpmTasks('grunt-includes');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sass');
 
   // Task definitions
-  grunt.registerTask('build', ['clean', 'sass', 'cssmin', 'includes']);
+  grunt.registerTask('build', ['clean', 'sass', 'postcss', 'cssmin', 'includes']);
   grunt.registerTask('default', ['build']);
 };
