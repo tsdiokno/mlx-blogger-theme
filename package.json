@@ -1,0 +1,26 @@
+{
+  "name": "mlx-blogger-theme",
+  "version": "1.0.0",
+  "description": "Blogger theme for The Manila Examiner site.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsdiokno/mlx-blogger-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsdiokno/mlx-blogger-theme/issues"
+  },
+  "homepage": "https://github.com/tsdiokno/mlx-blogger-theme#readme",
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-includes": "^1.1.0",
+    "grunt-template-render": "0.0.1"
+  }
+}
