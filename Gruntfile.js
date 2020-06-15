@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -6,6 +8,19 @@ module.exports = function(grunt) {
     // Remove built directory
     clean: {
       build: ['build/*']
+    },
+
+    sass: {
+        options: {
+            implementation: sass,
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'include/css/main-scss.css': 'include/sass/main-scss.scss'
+            }
+        }
+
     },
 
     cssmin: {
@@ -38,8 +53,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-sass');
 
   // Task definitions
-  grunt.registerTask('build', ['clean', 'cssmin', 'includes']);
+  grunt.registerTask('build', ['clean', 'sass', 'cssmin', 'includes']);
   grunt.registerTask('default', ['build']);
 };

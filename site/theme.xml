@@ -33,17 +33,17 @@ Author :     Blossom Themes
 Author URI : https://blossomthemes.blogspot.com
 License:     Premium Version Licence of Blossom Themes
 ----------------------------------------------- */
+
+
 /* Variable definitions
 -----------------------
 
-<Group description="Main Settings" selector="body">
-<Variable name="darkcolor" description="Dark Color of theme" type="color"  default="#333333"  value="#333333"/>
-<Variable name="maincolor" description="Main Color of theme" type="color"  default="#ff3f00"  value="#505cfd"/>
-</Group>
+include "partials/variable-definitions.xml"
+
 -----------------------
 */
 
-include "css/main.min.css"
+include "css/main-scss.min.css"
 
 ]]></b:skin>
     <b:template-skin>
@@ -52,6 +52,7 @@ include "css/main.min.css"
 include "css/template-skin.min.css"
 
 ]]></b:template-skin>
+
     <script>var cmtal = false;</script>
     <b:if cond='data:blog.url != data:blog.homepageUrl'>
       <style>.custwid{display:none}</style>
