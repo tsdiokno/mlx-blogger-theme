@@ -12,9 +12,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'include',
+          cwd: 'include/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'include',
+          dest: 'include/css',
           ext: '.min.css'
         }]
       }
@@ -29,7 +29,6 @@ module.exports = function(grunt) {
         options: {
           flatten: true,
           includePath: 'include',
-          banner: '<!-- Site built using grunt includes! -->\n'
         }
       }
     }
