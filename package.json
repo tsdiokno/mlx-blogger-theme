@@ -25,6 +25,6 @@
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.1.0",
     "grunt-template-render": "0.0.1",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   }
 }
