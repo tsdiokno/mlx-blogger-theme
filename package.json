@@ -18,7 +18,7 @@
   "homepage": "https://github.com/tsdiokno/mlx-blogger-theme#readme",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
-    "grunt": "^1.1.0",
+    "grunt": "^1.5.2",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-includes": "^1.1.0",
